@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>
+		CakePHP: the rapid development php framework:
+		Shops	</title>
+	<link href="/cakephp/app/webroot/favicon.ico" type="image/x-icon" rel="icon" /><link href="/cakephp/app/webroot/favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="/cakephp/app/webroot/css/cake.generic.css" /><link rel="stylesheet" type="text/css" href="/cakephp/app/webroot/css/shop_index.css" />
+	<link rel="stylesheet" type="text/css" href="/cakephp/app/webroot/debug_kit/css/debug_toolbar.css" />
+<script type="text/javascript">
+//<![CDATA[
+window.DEBUGKIT_JQUERY_URL = "/cakephp/app/webroot/debug_kit/js/jquery.js";
+//]]>
+</script><script type="text/javascript" src="/cakephp/app/webroot/debug_kit/js/js_debug_toolbar.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1><a href="http://cakephp.org">CakePHP: the rapid development php framework</a></h1>
+		</div>
+		<div id="content">
+
+			
+			
+<div class="section form_search">
+	<h2>検索項目</h2>
+	<form action="/cakephp/index.php/shops" novalidate="novalidate" id="ShopIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>	<h3>店舗名</h3>
+	<div class="input text required"><input name="data[Shop][name]" placeholder="例）店舗名を入力して下さい。　※フリガナ可" maxlength="255" type="text" value="" id="ShopName" required="required"/></div>	<h3>公開設定</h3>
+	<select name="data[Shop][display]" id="ShopDisplay">
+<option value="">すべて</option>
+<option value="0">非表示</option>
+<option value="1">表示</option>
+</select>	<div class="submit"><input  type="submit" value="検索"/></div>	</form></div>
+
+<div class="section">
+	<h2>店舗一覧</h2>
+	<table>
+		<tr>
+			<th><a href="/cakephp/index.php/shops/index/sort:id/direction:asc?name=&amp;display=">ID</a></th>
+			<th><a href="/cakephp/index.php/shops/index/sort:name/direction:asc?name=&amp;display=">店舗名</a></th>
+			<th><a href="/cakephp/index.php/shops/index/sort:display/direction:asc?name=&amp;display=">公開設定</a></th>
+		</tr>
+
+		
+		<tr>
+			<td>00000001</td>
+			<td>串カツ山上</td>
+			<td>表示</td>
+		</tr>
+
+		
+		<tr>
+			<td>00000002</td>
+			<td>ステーキ・山本</td>
+			<td>表示</td>
+		</tr>
+
+		
+	</table>
+</div>
+
+
+<div class="paginateLinks">
+	<span class="prev">&lt;&lt; Previous</span>&nbsp;
+	<span class="current">1</span> | <span><a href="/cakephp/index.php/shops/index/page:2?name=&amp;display=">2</a></span> | <span><a href="/cakephp/index.php/shops/index/page:3?name=&amp;display=">3</a></span> | <span><a href="/cakephp/index.php/shops/index/page:4?name=&amp;display=">4</a></span>&nbsp;
+	<span class="next"><a href="/cakephp/index.php/shops/index/page:2?name=&amp;display=" rel="next">Next &gt;&gt;</a></span></div>
+
+		</div>
+		<div id="footer">
+			<a href="http://www.cakephp.org/" target="_blank" id="cake-powered"><img src="/cakephp/app/webroot/img/cake.power.gif" alt="CakePHP: the rapid development php framework" border="0" /></a>			<p>
+				CakePHP 2.6.7			</p>
+		</div>
+	</div>
+	<table class="cake-sql-log" id="cakeSqlLog_14472275575642f0a5cd43f9_66845397" summary="Cake SQL Log" cellspacing="0"><caption>(default) 2 queries took 2 ms</caption>	<thead>
+		<tr><th>Nr</th><th>Query</th><th>Error</th><th>Affected</th><th>Num. rows</th><th>Took (ms)</th></tr>
+	</thead>
+	<tbody>
+	<tr><td>1</td><td>SELECT `Shop`.`id`, `Shop`.`name`, `Shop`.`kana`, `Shop`.`display` FROM `cakephp`.`shops` AS `Shop`   WHERE 1 = 1    LIMIT 2</td><td></td><td style="text-align: right">2</td><td style="text-align: right">2</td><td style="text-align: right">1</td></tr>
+<tr><td>2</td><td>SELECT COUNT(*) AS `count` FROM `cakephp`.`shops` AS `Shop`   WHERE 1 = 1</td><td></td><td style="text-align: right">1</td><td style="text-align: right">1</td><td style="text-align: right">1</td></tr>
+	</tbody></table>
+	<div id="debug-kit-toolbar">
+			<ul id="panel-tabs">
+			<li class="panel-tab icon">
+				<a href="#hide" id="hide-toolbar">
+					<img src="/cakephp/app/webroot/debug_kit/img/cake.icon.png" alt="CakePHP" />				</a>
+			</li>
+								<li class="panel-tab">
+			<a href="#history">History</a>				<div class="panel-content" id="history-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2> Request History</h2>
+	4 previous requests available	<ul class="history-list">
+		<li><a href="#" class="history-link" id="history-restore-current">Restore to current request</a>		</li>
+					<li><a href="/cakephp/index.php/debug_kit/toolbar_access/history_state/1" class="history-link">shops/index/page:2?name=&amp;display=</a></li>
+					<li><a href="/cakephp/index.php/debug_kit/toolbar_access/history_state/2" class="history-link">shops/index/page:4?name=&amp;display=</a></li>
+					<li><a href="/cakephp/index.php/debug_kit/toolbar_access/history_state/3" class="history-link">shops/index/page:3?name=&amp;display=</a></li>
+					<li><a href="/cakephp/index.php/debug_kit/toolbar_access/history_state/4" class="history-link">shops?name=&amp;display=</a></li>
+			</ul>
+						</div>
+						<div class="panel-content-data panel-history" id="history-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#session">Session</a>				<div class="panel-content" id="session-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2>Session</h2>
+<ul class="neat-array depth-0"><li><strong>0</strong>(null)</li></ul>						</div>
+						<div class="panel-content-data panel-history" id="session-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#request">Request</a>				<div class="panel-content" id="request-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2> Request</h2>
+
+<h4>Cake Params</h4>
+<ul class="neat-array depth-0"><li><strong>plugin</strong>(null)</li><li><strong>controller</strong>shops</li><li><strong>action</strong>index</li><li><strong>named</strong>(empty)</li><li><strong>pass</strong>(empty)</li><li><strong>paging</strong>(array)<ul class="neat-array depth-1"><li><strong>Shop</strong>(array)<ul class="neat-array depth-2"><li><strong>page</strong>1</li><li><strong>current</strong>2</li><li><strong>count</strong>7</li><li><strong>prevPage</strong>(false)</li><li><strong>nextPage</strong>(true)</li><li><strong>pageCount</strong>4</li><li><strong>order</strong>(null)</li><li><strong>limit</strong>2</li><li><strong>options</strong>(empty)</li><li><strong>paramType</strong>named</li></ul></li></ul></li></ul>
+<h4>Post data</h4>
+<ul class="neat-array depth-0"><li><strong>Shop</strong>(array)<ul class="neat-array depth-1"><li><strong>name</strong></li><li><strong>display</strong></li></ul></li></ul>
+<h4>Query string</h4>
+<ul class="neat-array depth-0"><li><strong>name</strong></li><li><strong>display</strong></li></ul>
+<h4>Cookie</h4>
+	<p class="info">To view Cookies, add CookieComponent to Controller</p>
+
+<h4>Current Route</h4>
+<ul class="neat-array depth-0"><li><strong>keys</strong>(array)<ul class="neat-array depth-1"><li><strong>0</strong>controller</li></ul></li><li><strong>options</strong>(array)<ul class="neat-array depth-1"><li><strong>defaultRoute</strong>(true)</li></ul></li><li><strong>defaults</strong>(array)<ul class="neat-array depth-1"><li><strong>action</strong>index</li><li><strong>plugin</strong>(null)</li></ul></li><li><strong>template</strong>/:controller</li></ul>						</div>
+						<div class="panel-content-data panel-history" id="request-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#sql_log">Sql Log</a>				<div class="panel-content" id="sql_log-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2>Sql Logs</h2>
+		<div class="sql-log-panel-query-log">
+		<h4>default</h4>
+		 No query logs.	</div>
+							</div>
+						<div class="panel-content-data panel-history" id="sql_log-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#timer">Timer</a>				<div class="panel-content" id="timer-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<div class="debug-info">
+	<h2>Memory</h2>
+	<div class="peak-mem-use">
+	<p><strong>Peak Memory Use</strong> 5.22 MB</p>	</div>
+
+	<table class="debug-table"><tr><th>Message</th> <th>Memory use</th></tr><tr class="odd"><td>Component initialization</td> <td>2.11 MB</td></tr>
+<tr class="even"><td>Controller action start</td> <td>2.82 MB</td></tr>
+<tr class="odd"><td>Controller render start</td> <td>3.44 MB</td></tr>
+<tr class="even"><td>View render complete</td> <td>4.55 MB</td></tr></table></div>
+
+<div class="debug-info debug-timers">
+	<h2>Timers</h2>
+	<div class="request-time">
+				<p><strong>Total Request Time:</strong> 212 (ms)</p>	</div>
+<table class="debug-table"><tr><th>Message</th> <th>Time in ms</th> <th>Graph</th></tr><tr class="odd"><td>Core Processing (Derived from $_SERVER["REQUEST_TIME"])</td> <td>88.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 0px; width: 146px" title="Starting 0.00ms into the request, taking 88.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td>Event: Controller.initialize</td> <td>16.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 146px; width: 27px" title="Starting 88.00ms into the request, taking 16.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td>Event: Controller.startup</td> <td>1.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 173px; width: 2px" title="Starting 104.00ms into the request, taking 1.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td>Controller action</td> <td>25.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 174px; width: 41px" title="Starting 105.00ms into the request, taking 25.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td>Event: Controller.beforeRender</td> <td>25.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 216px; width: 41px" title="Starting 130.00ms into the request, taking 25.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td> &raquo; Processing toolbar data</td> <td>24.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 216px; width: 40px" title="Starting 130.00ms into the request, taking 24.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td>Rendering View</td> <td>29.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 275px; width: 48px" title="Starting 166.00ms into the request, taking 29.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td> &raquo; Event: View.beforeRender</td> <td>0.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 277px; width: 1px" title="Starting 167.00ms into the request, taking 0.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td> &raquo; Rendering APP\View\Shops\index.ctp</td> <td>21.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 279px; width: 35px" title="Starting 168.00ms into the request, taking 21.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td> &raquo; Event: View.afterRender</td> <td>0.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 315px; width: 1px" title="Starting 190.00ms into the request, taking 0.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td> &raquo; Event: View.beforeLayout</td> <td>0.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 315px; width: 1px" title="Starting 190.00ms into the request, taking 0.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td>Rendering APP\View\Layouts\default.ctp</td> <td>5.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 315px; width: 8px" title="Starting 190.00ms into the request, taking 5.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="odd"><td>Rendering CORE\Cake\View\Elements\sql_dump.ctp</td> <td>2.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 320px; width: 3px" title="Starting 193.00ms into the request, taking 2.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr>
+<tr class="even"><td>Event: View.afterLayout</td> <td>0.00</td> <td><div style="width: 350px;" class="debug-kit-graph-bar"><div style="margin-left: 323px; width: 1px" title="Starting 195.00ms into the request, taking 0.00ms" class="debug-kit-graph-bar-value"> </div></div></td></tr></table></div>
+						</div>
+						<div class="panel-content-data panel-history" id="timer-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#log">Log</a>				<div class="panel-content" id="log-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2>Logs</h2>
+<div class="code-table">
+				<p class="info">There were no log entries made this request</p>
+	</div>
+						</div>
+						<div class="panel-content-data panel-history" id="log-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#variables">Variables</a>				<div class="panel-content" id="variables-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2> View Variables</h2>
+<ul class="neat-array depth-0"><li><strong>shopList</strong>(array)<ul class="neat-array depth-1"><li><strong>0</strong>(array)<ul class="neat-array depth-2"><li><strong>Shop</strong>(array)<ul class="neat-array depth-3"><li><strong>id</strong>00000001</li><li><strong>name</strong>串カツ山上</li><li><strong>kana</strong>クシカツヤマウエ</li><li><strong>display</strong>1</li></ul></li></ul></li><li><strong>1</strong>(array)<ul class="neat-array depth-2"><li><strong>Shop</strong>(array)<ul class="neat-array depth-3"><li><strong>id</strong>00000002</li><li><strong>name</strong>ステーキ・山本</li><li><strong>kana</strong>ステーキ・ヤマモト</li><li><strong>display</strong>1</li></ul></li></ul></li></ul></li><li><strong>isSearch</strong>(false)</li><li><strong>$request->data</strong>(array)<ul class="neat-array depth-1"><li><strong>Shop</strong>(array)<ul class="neat-array depth-2"><li><strong>name</strong></li><li><strong>display</strong></li></ul></li></ul></li><li><strong>$this->validationErrors</strong>(array)<ul class="neat-array depth-1"><li><strong>Shop</strong>(empty)</li></ul></li><li><strong>Loaded Helpers</strong>(array)<ul class="neat-array depth-1"><li><strong>0</strong>Number</li><li><strong>1</strong>SimpleGraph</li><li><strong>2</strong>Paginator</li><li><strong>3</strong>DebugTimer</li><li><strong>4</strong>Toolbar</li><li><strong>5</strong>Form</li><li><strong>6</strong>Html</li><li><strong>7</strong>Session</li><li><strong>8</strong>HtmlToolbar</li></ul></li></ul>						</div>
+						<div class="panel-content-data panel-history" id="variables-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#environment">Environment</a>				<div class="panel-content" id="environment-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2>App Constants</h2>
+No application environment available.
+<h2>CakePHP Constants</h2>
+<table class="debug-table"><tr><th>Constant</th> <th>Value</th></tr><tr class="odd"><td>APP</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\</td></tr>
+<tr class="even"><td>APP_DIR</td> <td>app</td></tr>
+<tr class="odd"><td>APPLIBS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\Lib\</td></tr>
+<tr class="even"><td>CACHE</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\tmp\cache\</td></tr>
+<tr class="odd"><td>CAKE</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\lib\Cake\</td></tr>
+<tr class="even"><td>CAKE_CORE_INCLUDE_PATH</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\lib</td></tr>
+<tr class="odd"><td>CORE_PATH</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\lib\</td></tr>
+<tr class="even"><td>CAKE_VERSION</td> <td>2.6.7</td></tr>
+<tr class="odd"><td>CSS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\webroot\css\</td></tr>
+<tr class="even"><td>CSS_URL</td> <td>css/</td></tr>
+<tr class="odd"><td>DS</td> <td>\</td></tr>
+<tr class="even"><td>FULL_BASE_URL</td> <td>http://127.0.0.1:52107</td></tr>
+<tr class="odd"><td>IMAGES</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\webroot\img\</td></tr>
+<tr class="even"><td>IMAGES_URL</td> <td>img/</td></tr>
+<tr class="odd"><td>JS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\webroot\js\</td></tr>
+<tr class="even"><td>JS_URL</td> <td>js/</td></tr>
+<tr class="odd"><td>LOGS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\tmp\logs\</td></tr>
+<tr class="even"><td>ROOT</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp</td></tr>
+<tr class="odd"><td>TESTS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\Test\</td></tr>
+<tr class="even"><td>TMP</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\tmp\</td></tr>
+<tr class="odd"><td>VENDORS</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\vendors\</td></tr>
+<tr class="even"><td>WEBROOT_DIR</td> <td>webroot</td></tr>
+<tr class="odd"><td>WWW_ROOT</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\app\webroot\</td></tr></table>
+<h2>PHP Environment</h2>
+<table class="debug-table"><tr><th>Environment Variable</th> <th>Value</th></tr><tr class="odd"><td>Php Version</td> <td>5.6.1</td></tr>
+<tr class="even"><td>Server Name</td> <td>127.0.0.1</td></tr>
+<tr class="odd"><td>Server Root</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www</td></tr>
+<tr class="even"><td>Document Root</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www</td></tr>
+<tr class="odd"><td>Server Software</td> <td>Mongoose/3.9c</td></tr>
+<tr class="even"><td>Gateway Interface</td> <td>CGI/1.1</td></tr>
+<tr class="odd"><td>Server Protocol</td> <td>HTTP/1.1</td></tr>
+<tr class="even"><td>Redirect Status</td> <td>200</td></tr>
+<tr class="odd"><td>Server Port</td> <td>52107</td></tr>
+<tr class="even"><td>Request Method</td> <td>GET</td></tr>
+<tr class="odd"><td>Remote Addr</td> <td>127.0.0.1</td></tr>
+<tr class="even"><td>Remote Port</td> <td>53034</td></tr>
+<tr class="odd"><td>Request Uri</td> <td>/cakephp/index.php/shops?name=&amp;display=</td></tr>
+<tr class="even"><td>Script Name</td> <td>/cakephp/index.php</td></tr>
+<tr class="odd"><td>Script Filename</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\index.php</td></tr>
+<tr class="even"><td>Path Translated</td> <td>C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\index.php</td></tr>
+<tr class="odd"><td>Https</td> <td>off</td></tr>
+<tr class="even"><td>Query String</td> <td>name=&amp;display=</td></tr>
+<tr class="odd"><td>Path</td> <td>C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseGit\bin;C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\php;C:\Program Files\Internet Explorer;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseGit\bin;C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\php;</td></tr>
+<tr class="even"><td>Path Info</td> <td>/shops</td></tr>
+<tr class="odd"><td>Appdata</td> <td>C:\Users\lin\AppData\Roaming</td></tr>
+<tr class="even"><td>Localappdata</td> <td>C:\Users\lin\AppData\Local</td></tr>
+<tr class="odd"><td>Comspec</td> <td>C:\Windows\system32\cmd.exe</td></tr>
+<tr class="even"><td>Comspec</td> <td>C:\Windows\system32\cmd.exe</td></tr>
+<tr class="odd"><td>Os</td> <td>Windows_NT</td></tr>
+<tr class="even"><td>Programfiles</td> <td>C:\Program Files</td></tr>
+<tr class="odd"><td>Programfiles</td> <td>C:\Program Files</td></tr>
+<tr class="even"><td>Commonprogramfiles</td> <td>C:\Program Files\Common Files</td></tr>
+<tr class="odd"><td>Systemdrive</td> <td>C:</td></tr>
+<tr class="even"><td>Systemdrive</td> <td>C:</td></tr>
+<tr class="odd"><td>Systemroot</td> <td>C:\Windows</td></tr>
+<tr class="even"><td>Systemroot</td> <td>C:\Windows</td></tr>
+<tr class="odd"><td>Windir</td> <td>C:\Windows</td></tr>
+<tr class="even"><td>Windir</td> <td>C:\Windows</td></tr>
+<tr class="odd"><td>Allusersprofile</td> <td>C:\ProgramData</td></tr>
+<tr class="even"><td>Programdata</td> <td>C:\ProgramData</td></tr>
+<tr class="odd"><td>Programdata</td> <td>C:\ProgramData</td></tr>
+<tr class="even"><td>Public</td> <td>C:\Users\Public</td></tr>
+<tr class="odd"><td>Userdomain</td> <td>HAPPY</td></tr>
+<tr class="even"><td>Userprofile</td> <td>C:\Users\lin</td></tr>
+<tr class="odd"><td>Homepath</td> <td>\Users\lin</td></tr>
+<tr class="even"><td>Homedrive</td> <td>C:</td></tr>
+<tr class="odd"><td>Computername</td> <td>HPDC5750SF2009</td></tr>
+<tr class="even"><td>Logonserver</td> <td>\\SMB</td></tr>
+<tr class="odd"><td>Pathext</td> <td>.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</td></tr>
+<tr class="even"><td>Psmodulepath</td> <td>C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</td></tr>
+<tr class="odd"><td>Username</td> <td>lin</td></tr>
+<tr class="even"><td>Http Host</td> <td>127.0.0.1:52107</td></tr>
+<tr class="odd"><td>Http Connection</td> <td>keep-alive</td></tr>
+<tr class="even"><td>Http Accept</td> <td>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</td></tr>
+<tr class="odd"><td>Http User Agent</td> <td>Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36</td></tr>
+<tr class="even"><td>Http Referer</td> <td>http://127.0.0.1:52107/cakephp/index.php/shops/index/page:2?name=&amp;display=</td></tr>
+<tr class="odd"><td>Http Accept Encoding</td> <td>gzip,deflate</td></tr>
+<tr class="even"><td>Http Accept Language</td> <td>en-us,en;q=0.8</td></tr>
+<tr class="odd"><td>Http Cookie</td> <td>pla3412_1_9_6=01037b48ef06a7f6cce097344b77846d; pla3412_1_9_6_salt=SD5f74DiXTluCOVF8iMv; toolbarDisplay=hide</td></tr>
+<tr class="even"><td>Tmp</td> <td>C:\Users\lin\AppData\Local\Temp\</td></tr>
+<tr class="odd"><td>Temp</td> <td>C:\Users\lin\AppData\Local\Temp\</td></tr>
+<tr class="even"><td>Tmpdir</td> <td>C:\Users\lin\AppData\Local\Temp\</td></tr>
+<tr class="odd"><td>Phpdesktop Version</td> <td>31.8</td></tr>
+<tr class="even"><td>Php Self</td> <td>/cakephp/index.php/shops</td></tr>
+<tr class="odd"><td>Request Time Float</td> <td>1447227557.6218</td></tr>
+<tr class="even"><td>Request Time</td> <td>1447227557</td></tr>
+<tr class="odd"><td>Argc</td> <td>1</td></tr></table>						</div>
+						<div class="panel-content-data panel-history" id="environment-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+								<li class="panel-tab">
+			<a href="#include">Include</a>				<div class="panel-content" id="include-tab">
+					<a href="#" class="panel-toggle ui-control ui-button">+</a>
+					<div class="panel-resize-region">
+						<div class="panel-content-data">
+							<h2> Included Files</h2>
+
+<h4>Include Paths</h4>
+<ul class="neat-array depth-0"><li><strong>1</strong>C:\php\pear</li><li><strong>2</strong>-&gt; C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp\lib\Cake\</li></ul>
+<h4>Included Files</h4>
+<ul class="neat-array depth-0"><li><strong>core</strong>(array)<ul class="neat-array depth-1"><li><strong>Other</strong>(array)<ul class="neat-array depth-2"><li><strong>0</strong>CORE/bootstrap.php</li><li><strong>1</strong>CORE/basics.php</li><li><strong>2</strong>CORE/Core\App.php</li><li><strong>3</strong>CORE/Error\exceptions.php</li><li><strong>4</strong>CORE/Core\Configure.php</li><li><strong>5</strong>CORE/Utility\Hash.php</li><li><strong>6</strong>CORE/Cache\Cache.php</li><li><strong>7</strong>CORE/Cache\Engine\FileEngine.php</li><li><strong>8</strong>CORE/Cache\CacheEngine.php</li><li><strong>9</strong>CORE/Utility\Inflector.php</li><li><strong>10</strong>CORE/Error\ErrorHandler.php</li><li><strong>11</strong>CORE/Core\CakePlugin.php</li><li><strong>12</strong>CORE/Log\CakeLog.php</li><li><strong>13</strong>CORE/Log\LogEngineCollection.php</li><li><strong>14</strong>CORE/Utility\ObjectCollection.php</li><li><strong>15</strong>CORE/Log\Engine\FileLog.php</li><li><strong>16</strong>CORE/Log\Engine\BaseLog.php</li><li><strong>17</strong>CORE/Log\CakeLogInterface.php</li><li><strong>18</strong>CORE/Utility\Debugger.php</li><li><strong>19</strong>CORE/Utility\String.php</li><li><strong>20</strong>CORE/Routing\Dispatcher.php</li><li><strong>21</strong>CORE/Event\CakeEventListener.php</li><li><strong>22</strong>CORE/Network\CakeRequest.php</li><li><strong>23</strong>CORE/Network\CakeResponse.php</li><li><strong>24</strong>CORE/Event\CakeEvent.php</li><li><strong>25</strong>CORE/Event\CakeEventManager.php</li><li><strong>26</strong>CORE/Routing\Filter\AssetDispatcher.php</li><li><strong>27</strong>CORE/Routing\DispatcherFilter.php</li><li><strong>28</strong>CORE/Routing\Filter\CacheDispatcher.php</li><li><strong>29</strong>CORE/Routing\Router.php</li><li><strong>30</strong>CORE/Routing\Route\CakeRoute.php</li><li><strong>31</strong>CORE/Config\routes.php</li><li><strong>32</strong>CORE/Routing\Route\PluginShortRoute.php</li><li><strong>33</strong>CORE/Controller\Controller.php</li><li><strong>34</strong>CORE/Core\Object.php</li><li><strong>35</strong>CORE/Controller\ComponentCollection.php</li><li><strong>36</strong>CORE/Controller\Component.php</li><li><strong>37</strong>CORE/I18n\I18n.php</li><li><strong>38</strong>CORE/I18n\L10n.php</li><li><strong>39</strong>CORE/Model\Datasource\CakeSession.php</li><li><strong>40</strong>CORE/Controller\Component\SessionComponent.php</li><li><strong>41</strong>CORE/Utility\ClassRegistry.php</li><li><strong>42</strong>CORE/Model\Model.php</li><li><strong>43</strong>CORE/Model\BehaviorCollection.php</li><li><strong>44</strong>CORE/Model\ModelBehavior.php</li><li><strong>45</strong>CORE/View\HelperCollection.php</li><li><strong>46</strong>CORE/Controller\Component\PaginatorComponent.php</li><li><strong>47</strong>CORE/Model\ConnectionManager.php</li><li><strong>48</strong>CORE/Model\Datasource\Database\Mysql.php</li><li><strong>49</strong>CORE/Model\Datasource\DboSource.php</li><li><strong>50</strong>CORE/Model\Datasource\DataSource.php</li><li><strong>51</strong>CORE/Config\config.php</li></ul></li></ul></li><li><strong>app</strong>(array)<ul class="neat-array depth-1"><li><strong>Other</strong>(array)<ul class="neat-array depth-2"><li><strong>0</strong>APP/webroot\index.php</li><li><strong>1</strong>APP/Config\core.php</li><li><strong>2</strong>APP/Config\bootstrap.php</li><li><strong>3</strong>APP/Config\routes.php</li><li><strong>4</strong>APP/Controller\ShopsController.php</li><li><strong>5</strong>APP/Controller\AppController.php</li><li><strong>6</strong>APP/Model\Shop.php</li><li><strong>7</strong>APP/Model\AppModel.php</li><li><strong>8</strong>APP/Config\database.php</li></ul></li></ul></li><li><strong>plugins</strong>(array)<ul class="neat-array depth-1"><li><strong>DebugKit</strong>(array)<ul class="neat-array depth-2"><li><strong>Other</strong>(array)<ul class="neat-array depth-3"><li><strong>0</strong>DebugKit/Controller\Component\ToolbarComponent.php</li><li><strong>1</strong>DebugKit/Lib\DebugMemory.php</li><li><strong>2</strong>DebugKit/Lib\Panel\HistoryPanel.php</li><li><strong>3</strong>DebugKit/Lib\DebugPanel.php</li><li><strong>4</strong>DebugKit/Lib\Panel\SessionPanel.php</li><li><strong>5</strong>DebugKit/Lib\Panel\RequestPanel.php</li><li><strong>6</strong>DebugKit/Lib\Panel\SqlLogPanel.php</li><li><strong>7</strong>DebugKit/Lib\Panel\TimerPanel.php</li><li><strong>8</strong>DebugKit/Lib\Panel\LogPanel.php</li><li><strong>9</strong>DebugKit/Lib\Log\Engine\DebugKitLog.php</li><li><strong>10</strong>DebugKit/Lib\Panel\VariablesPanel.php</li><li><strong>11</strong>DebugKit/Lib\Panel\EnvironmentPanel.php</li><li><strong>12</strong>DebugKit/Lib\Panel\IncludePanel.php</li><li><strong>13</strong>DebugKit/Lib\DebugTimer.php</li></ul></li></ul></li><li><strong>Search</strong>(array)<ul class="neat-array depth-2"><li><strong>Other</strong>(array)<ul class="neat-array depth-3"><li><strong>0</strong>Search/Controller\Component\PrgComponent.php</li><li><strong>1</strong>Search/Model\Behavior\SearchableBehavior.php</li></ul></li></ul></li></ul></li></ul>						</div>
+						<div class="panel-content-data panel-history" id="include-history">
+							<!-- content here -->
+						</div>
+					</div>
+					<div class="panel-resize-handle ui-control">====</div>
+				</div>
+						</li>
+				</ul>
+	</div>
+
+</body>
+</html>

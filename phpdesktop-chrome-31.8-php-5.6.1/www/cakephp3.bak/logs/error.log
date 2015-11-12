@@ -1,0 +1,14 @@
+2015-11-06 00:38:52 Error: [RuntimeException] Unable to find 'App' panel.
+Stack Trace:
+#0 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): DebugKit\Panel\PanelRegistry->_throwMissingClassError('App', NULL)
+#1 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(146): Cake\Core\ObjectRegistry->load('App')
+#2 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\debug_kit\config\bootstrap.php(68): DebugKit\Routing\Filter\DebugBarFilter->setup()
+#3 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\cakephp\src\Core\Plugin.php(390): include('C:\\Users\\lin\\De...')
+#4 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\cakephp\src\Core\Plugin.php(316): Cake\Core\Plugin::_includeFile('C:\\Users\\lin\\De...', false)
+#5 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\vendor\cakephp\cakephp\src\Core\Plugin.php(176): Cake\Core\Plugin::bootstrap('DebugKit')
+#6 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\config\bootstrap.php(204): Cake\Core\Plugin::load('DebugKit', Array)
+#7 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\webroot\index.php(27): require('C:\\Users\\lin\\De...')
+#8 C:\Users\lin\Desktop\phpdesktop-chrome-31.8-php-5.6.1\phpdesktop-chrome-31.8-php-5.6.1\www\cakephp3\index.php(16): require('C:\\Users\\lin\\De...')
+#9 {main}
+
+
